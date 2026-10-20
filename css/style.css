@@ -77,6 +77,17 @@ img{max-width:100%;display:block}
 .partner-featured p{color:var(--text-light);line-height:1.7}
 .partner-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .partner-slot{background:#fff;border-radius:var(--radius);padding:32px;text-align:center;box-shadow:var(--shadow);color:var(--text-light);font-size:.9rem;border:2px dashed #ddd}
+.partner-category{margin-bottom:48px}
+.partner-category h3{font-size:1.3rem;color:var(--blue-dark);margin-bottom:8px;padding-bottom:8px;border-bottom:2px solid var(--blue)}
+.partner-category .category-subtitle{color:var(--text-light);font-size:.95rem;margin-bottom:20px}
+.partner-card{background:#fff;border-radius:var(--radius);padding:20px 16px;text-align:center;box-shadow:var(--shadow);transition:transform var(--transition);border-left:3px solid var(--blue);display:flex;flex-direction:column;align-items:center;gap:8px}
+.partner-card:hover{transform:translateY(-4px)}
+.partner-card .brand-logo{height:50px;display:flex;align-items:center;justify-content:center;margin-bottom:4px}
+.partner-card .brand-logo img{max-height:50px;max-width:120px;object-fit:contain}
+.partner-card .brand-logo-text{font-size:1.3rem;font-weight:700;color:var(--blue);letter-spacing:1px;line-height:1.2}
+.partner-card .brand-cn{font-size:1.05rem;font-weight:600;color:var(--blue-dark);margin-bottom:2px}
+.partner-card .brand-en{font-size:.85rem;color:var(--text-light)}
+.partner-card .brand-desc{font-size:.8rem;color:var(--text-light);margin-top:2px}
 
 /* ===== About ===== */
 .about-content{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
