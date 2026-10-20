@@ -131,23 +131,52 @@
     <div class="container">
       <h2 class="section-title fade-in" data-cn="品牌合作伙伴" data-en="Brand Partners">品牌合作伙伴</h2>
       <p class="section-subtitle fade-in" data-cn="携手行业领先品牌，提供可靠的医疗解决方案" data-en="Partnering with industry-leading brands for reliable medical solutions">携手行业领先品牌，提供可靠的医疗解决方案</p>
-      <div class="partner-featured fade-in">
-        <div class="partner-logo"><img src="images/sansure-logo.png" alt="Sansure Biotech 圣湘生物"></div>
-        <div class="partner-info">
-          <h3 data-cn="圣湘生物科技股份有限公司" data-en="Sansure Biotech Inc.">圣湘生物科技股份有限公司</h3>
-          <p data-cn="圣湘生物是国内领先的分子诊断企业，专注于分子诊断技术和产品的研发、生产与销售。公司产品涵盖PCR仪器、核酸提取系统、分子诊断试剂等，广泛应用于传染病防控、精准医疗等领域。" data-en="Sansure Biotech is a leading molecular diagnostics company in China, focused on the R&D, manufacturing, and sales of molecular diagnostic technologies and products. Their portfolio includes PCR instruments, nucleic acid extraction systems, and molecular diagnostic reagents for infectious disease control and precision medicine.">圣湘生物是国内领先的分子诊断企业，专注于分子诊断技术和产品的研发、生产与销售。</p>
+      <div class="partner-carousel fade-in">
+        <button class="carousel-btn carousel-prev" onclick="partnerCarousel(-1)" aria-label="Previous">‹</button>
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="partnerTrack">
+            <div class="carousel-card">
+              <div class="brand-logo"><img src="images/sansure-logo.png" alt="Sansure Biotech 圣湘生物"></div>
+              <div class="brand-cn">圣湘生物</div>
+              <div class="brand-desc" data-cn="分子诊断领先企业" data-en="Leading molecular diagnostics">分子诊断领先企业</div>
+            </div>
+            <div class="carousel-card">
+              <div class="brand-logo"><span class="brand-logo-text">YHLO</span></div>
+              <div class="brand-cn">亚辉龙</div>
+            </div>
+            <div class="carousel-card">
+              <div class="brand-logo"><img src="images/partners/bd.png" alt="BD"></div>
+              <div class="brand-cn">BD</div>
+            </div>
+            <div class="carousel-card">
+              <div class="brand-logo"><span class="brand-logo-text" style="color:#e31937">Agilent</span></div>
+              <div class="brand-cn">安捷伦</div>
+            </div>
+            <div class="carousel-card">
+              <div class="brand-logo"><img src="images/partners/zeiss.png" alt="ZEISS"></div>
+              <div class="brand-cn">蔡司</div>
+            </div>
+            <div class="carousel-card">
+              <div class="brand-logo"><span class="brand-logo-text" style="color:#00a4e4">Mindray</span></div>
+              <div class="brand-cn">迈瑞</div>
+            </div>
+            <div class="carousel-card">
+              <div class="brand-logo"><img src="images/partners/draeger.png" alt="Dräger"></div>
+              <div class="brand-cn">德尔格</div>
+            </div>
+            <div class="carousel-card">
+              <div class="brand-logo"><img src="images/partners/leica.svg" alt="Leica"></div>
+              <div class="brand-cn">徕卡</div>
+            </div>
+            <div class="carousel-card">
+              <div class="brand-logo"><img src="images/partners/olympus.png" alt="Olympus"></div>
+              <div class="brand-cn">奥林巴斯</div>
+            </div>
+          </div>
         </div>
+        <button class="carousel-btn carousel-next" onclick="partnerCarousel(1)" aria-label="Next">›</button>
       </div>
-      <div class="partner-grid fade-in" style="margin-top:24px">
-        <div class="partner-card"><div class="brand-logo"><span class="brand-logo-text">YHLO</span></div><div class="brand-cn">亚辉龙</div></div>
-        <div class="partner-card"><div class="brand-logo"><img src="images/partners/bd.png" alt="BD"></div><div class="brand-cn">BD</div></div>
-        <div class="partner-card"><div class="brand-logo"><span class="brand-logo-text" style="color:#e31937">Agilent</span></div><div class="brand-cn">安捷伦</div></div>
-        <div class="partner-card"><div class="brand-logo"><img src="images/partners/zeiss.png" alt="ZEISS"></div><div class="brand-cn">蔡司</div></div>
-        <div class="partner-card"><div class="brand-logo"><span class="brand-logo-text" style="color:#00a4e4">Mindray</span></div><div class="brand-cn">迈瑞</div></div>
-        <div class="partner-card"><div class="brand-logo"><img src="images/partners/draeger.png" alt="Dräger"></div><div class="brand-cn">德尔格</div></div>
-        <div class="partner-card"><div class="brand-logo"><img src="images/partners/leica.svg" alt="Leica"></div><div class="brand-cn">徕卡</div></div>
-        <div class="partner-card"><div class="brand-logo"><img src="images/partners/olympus.png" alt="Olympus"></div><div class="brand-cn">奥林巴斯</div></div>
-      </div>
+      <div class="carousel-dots fade-in" id="carouselDots"></div>
       <div style="text-align:center;margin-top:24px" class="fade-in">
         <a href="partners.html" class="btn btn-outline" data-cn="查看全部合作伙伴 →" data-en="View All Partners →">查看全部合作伙伴 →</a>
       </div>

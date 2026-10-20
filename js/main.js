@@ -70,12 +70,73 @@ function goToSlide(i) {
 }
 function slideCarousel(dir) { goToSlide(carouselIndex + dir); }
 
+// Partner Carousel
+let partnerIdx = 0;
+function getVisibleCards() {
+  const w = window.innerWidth;
+  if (w <= 768) return 2;
+  if (w <= 992) return 3;
+  return 4;
+}
+function initPartnerCarousel() {
+  const track = document.getElementById('partnerTrack');
+  if (!track) return;
+  const cards = track.querySelectorAll('.carousel-card');
+  const dotsC = document.getElementById('carouselDots');
+  if (!dotsC) return;
+  const visible = getVisibleCards();
+  const pages = Math.max(1, cards.length - visible + 1);
+  dotsC.innerHTML = '';
+  for (let i = 0; i < pages; i++) {
+    const d = document.createElement('button');
+    d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => movePartner(i);
+    dotsC.appendChild(d);
+  }
+  partnerIdx = 0;
+  updatePartnerPos();
+  // Touch/swipe support
+  let startX = 0;
+  const vp = track.parentElement;
+  vp.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, {passive:true});
+  vp.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) partnerCarousel(diff > 0 ? 1 : -1);
+  });
+}
+function movePartner(i) {
+  const track = document.getElementById('partnerTrack');
+  const cards = track.querySelectorAll('.carousel-card');
+  const visible = getVisibleCards();
+  const maxIdx = Math.max(0, cards.length - visible);
+  partnerIdx = Math.max(0, Math.min(i, maxIdx));
+  updatePartnerPos();
+}
+function updatePartnerPos() {
+  const track = document.getElementById('partnerTrack');
+  const cards = track.querySelectorAll('.carousel-card');
+  if (!cards.length) return;
+  const cardW = cards[0].offsetWidth + 20; // margin
+  track.style.transform = 'translateX(-' + (partnerIdx * cardW) + 'px)';
+  const dots = document.querySelectorAll('#carouselDots .carousel-dot');
+  dots.forEach((d, j) => d.classList.toggle('active', j === partnerIdx));
+}
+function partnerCarousel(dir) {
+  const track = document.getElementById('partnerTrack');
+  const cards = track.querySelectorAll('.carousel-card');
+  const visible = getVisibleCards();
+  const maxIdx = Math.max(0, cards.length - visible);
+  movePartner(partnerIdx + dir);
+}
+
 // Init
 document.addEventListener('DOMContentLoaded', () => {
   setLang(getLang());
   initAnimations();
   updateActiveNav();
   initCarousel();
+  initPartnerCarousel();
+  window.addEventListener('resize', initPartnerCarousel);
   // Close mobile nav on link click
   document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => document.querySelector('.nav').classList.remove('open')));
 });
