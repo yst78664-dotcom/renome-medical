@@ -22,9 +22,9 @@ img{max-width:100%;display:block}
 
 /* ===== Header ===== */
 .header{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);box-shadow:0 1px 8px rgba(0,0,0,.06);transition:box-shadow var(--transition)}
-.header .container{display:flex;align-items:center;justify-content:space-between;height:90px}
+.header .container{display:flex;align-items:center;justify-content:space-between;height:78px}
 .logo{display:flex;align-items:center;gap:10px}
-.logo img{height:88px}
+.logo img{height:68px}
 .logo span{font-size:1.1rem;font-weight:700;color:var(--blue-dark)}
 .nav{display:flex;align-items:center;gap:4px}
 .nav a{padding:8px 16px;border-radius:var(--radius);font-size:.95rem;color:var(--text);font-weight:500;transition:all var(--transition)}
@@ -34,7 +34,7 @@ img{max-width:100%;display:block}
 .mobile-toggle{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--blue)}
 
 /* ===== Hero ===== */
-.hero{margin-top:90px;padding:100px 0 80px;background:linear-gradient(135deg,var(--blue) 0%,#0074d9 50%,var(--green) 100%);position:relative;overflow:hidden;color:#fff}
+.hero{margin-top:78px;padding:100px 0 80px;background:linear-gradient(135deg,var(--blue) 0%,#0074d9 50%,var(--green) 100%);position:relative;overflow:hidden;color:#fff}
 .hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='1.5' fill='rgba(255,255,255,0.08)'/%3E%3C/svg%3E");opacity:.6}
 .hero::after{content:'';position:absolute;right:-100px;top:-100px;width:500px;height:500px;border-radius:50%;background:rgba(255,255,255,.05)}
 .hero .container{position:relative;z-index:1;display:flex;align-items:center;gap:60px}
@@ -139,7 +139,7 @@ img{max-width:100%;display:block}
   .partner-featured{flex-direction:column;text-align:center}
 }
 @media(max-width:768px){
-  .nav{position:fixed;top:90px;left:0;right:0;background:#fff;flex-direction:column;padding:20px;box-shadow:var(--shadow);transform:translateY(-120%);transition:transform var(--transition);z-index:999}
+  .nav{position:fixed;top:78px;left:0;right:0;background:#fff;flex-direction:column;padding:20px;box-shadow:var(--shadow);transform:translateY(-120%);transition:transform var(--transition);z-index:999}
   .nav.open{transform:translateY(0)}
   .mobile-toggle{display:block}
   .lang-toggle{margin-left:0;margin-top:8px}
