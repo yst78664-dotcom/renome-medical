@@ -70,7 +70,8 @@ img{max-width:100%;display:block}
 /* ===== Partners ===== */
 .partners{background:var(--gray)}
 .partner-featured{background:#fff;border-radius:var(--radius);padding:48px;box-shadow:var(--shadow);display:flex;align-items:center;gap:48px;margin-bottom:40px}
-.partner-featured .partner-logo{flex:0 0 200px;height:80px;background:var(--blue-light);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:700;color:var(--blue)}
+.partner-featured .partner-logo{flex:0 0 220px;min-height:100px;background:var(--blue-light);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:700;color:var(--blue);padding:20px}
+.partner-featured .partner-logo img{max-width:180px;max-height:80px;object-fit:contain}
 .partner-featured .partner-info{flex:1}
 .partner-featured h3{font-size:1.4rem;color:var(--blue-dark);margin-bottom:12px}
 .partner-featured p{color:var(--text-light);line-height:1.7}
