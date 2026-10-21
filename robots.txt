@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://renome-medical.com/sitemap.xml
